@@ -1,12 +1,19 @@
-.navbar-lewagon {
+.navbar-rent-my-bag {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-rent-my-bag .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-rent-my-bag .navbar-brand h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 10px;
+}
+
+a {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
 }

@@ -32,6 +32,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -48,6 +49,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'dotenv-rails', groups: [:development, :test]
+  gem 'cloudinary', '~> 1.16.0'
+
 end
 
 group :test do
