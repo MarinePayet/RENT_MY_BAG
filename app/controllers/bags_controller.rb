@@ -10,7 +10,7 @@ class BagsController < ApplicationController
 
   def create
     @bag = Bag.new(bag_params)
-    @bag.user = User.find(params[:user_id])
+    @bag.user = current_user
     if @bag.save
       render :show
     else
