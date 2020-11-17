@@ -7,9 +7,19 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active sign_in">
+        <% if user_signed_in? %>
+        <a class="nav-link"><%= link_to "Rent your bag", new_bag_path(@bag) %></a>
+        <% end %>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><%= render "shared/login_items" %></a>
+      </li>
+
       <li class="nav-item active">
         <a class="nav-link" href="#">My account</a>
       </li>
