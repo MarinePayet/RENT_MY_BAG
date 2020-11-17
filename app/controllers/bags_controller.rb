@@ -5,7 +5,6 @@ class BagsController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
     @bag = Bag.new
   end
 
