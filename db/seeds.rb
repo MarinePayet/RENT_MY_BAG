@@ -1,3 +1,4 @@
+require 'faker'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -5,3 +6,48 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "destroying user"
+
+Booking.destroy_all
+Bag.destroy_all
+User.destroy_all
+puts "destroying bag"
+
+# puts "start user"
+# 10.times do
+#   @user_new = User.create!(
+#     email: Faker::Internet.email,
+#     first_name: Faker::Name.first_name,
+#     last_name: Faker::Name.last_name,
+#     address: Faker::Address.city,
+#     password: Faker::Code.npi
+#     )
+# end
+# puts "user finish"
+# puts "start bags"
+
+# 20.times do
+#   @bag_new = Bag.create!(
+#     title: Faker::Marketing.buzzwords,
+#     brand: Bag::BRAND.sample,
+#     price: [30, 40, 50, 60].sample,
+#     style: ["handbag", "clutch", "tote", "doctor"].sample,
+#     mood: ["Cocktail", "Wedding", "Daytime"].sample,
+#     color: Faker::Color.color_name,
+#     availability: true,
+#     user_id: @user_new.id
+#     )
+# end
+# puts "end bags"
+# puts "start booking"
+
+# 10.times do
+#   Booking.create!(
+#     date_of_booking: ["10/01 to 12/01", "10/08 to 11/08", "10/03 to 23°03"].sample
+#     user_id: @user_new.id
+#     bag_id: @bag_new.id
+#     )
+# end
+
+puts "booking finish"
