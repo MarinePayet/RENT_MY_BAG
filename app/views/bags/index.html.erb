@@ -27,11 +27,12 @@
     <div class="row">
       <% @bags.each do |bag| %>
         <div class="col col-lg-4">
-          <div class="card-trip">
+
+          <div class="card-bag">
           <%= cl_image_tag bag.photo.key, alt: "alttext" %>
           <%#= cl_image_tag bag.photo.key, height: 300 %>
 
-            <div class="card-trip-infos">
+            <div class="card-bag-infos">
               <div>
                 <%= link_to bag.title, bag_path(bag[:id]) %>
                   <% if bag.availability %>
@@ -42,7 +43,7 @@
                 <br>
                 <%= bag.brand %>
               </div>
-                <h2 class="card-trip-pricing"><%= bag.price %>€/day</h2>
+                <h2 class="card-bag-pricing"><%= bag.price %>€/day</h2>
               </div>
             </div>
             </div>

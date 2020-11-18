@@ -2,6 +2,11 @@ class BagsController < ApplicationController
 
   def index
     @bags = Bag.all.order(created_at: :desc)
+    if params[:brand]
+      @bags = Bag.where(:brand => params[:brand])
+    else
+      @bags = Bag.all.order(created_at: :desc)
+    end
   end
 
   def new

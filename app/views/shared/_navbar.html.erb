@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-rent-my-bag">
 
-  <a class="navbar-brand" href="/bags">
+  <a class="navbar-brand" href="/">
 
     <h1><%= image_tag("https://res.cloudinary.com/chiaramtr/image/upload/ar_1:1,b_rgb:ffffff,bo_5px_solid_rgb:151313,c_fill,g_auto,r_max,w_1000/v1605542217/BB50F0B0WD001-01-01_q4cjgn.jpg", height: 50, width: 70) %>
     Rent My Bag</h1>
@@ -14,7 +14,7 @@
 
       <li class="nav-item active sign_in">
         <% if user_signed_in? %>
-        <a class="nav-link"><%= link_to "Rent your bag", new_bag_path(@bag) %></a>
+        <a class="nav-link"><%= link_to "Add your bag", new_bag_path(@bag) %></a>
         <% end %>
       </li>
 
@@ -34,13 +34,12 @@
 </div>
 
 <div class="second-header">
-  <nav>
     <ul class="menubar" role="menubar list-item inline">
       <li class="menu-item" role="none">
         <href class="">
           <a role="menuitem"
           href="/bags">
-            Bags
+            All bags
           </a>
         </href>
       </li>
@@ -48,17 +47,64 @@
         <href class="">
           <a role="menuitem"
           href="#">
-            Brands
           </a>
         </href>
+            <div class="dropdown">
+              <button class="btn menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Brands
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item brand-list"><%= link_to "Chanel", bags_path(:brand=>"Chanel")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Fendi", bags_path(:brand=>"Fendi")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Burberry", bags_path(:brand=>"Burberry")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Chloé", bags_path(:brand=>"Chloé")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Lanvin", bags_path(:brand=>"Lanvin")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Givenchy", bags_path(:brand=>"Givenchy")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Dior", bags_path(:brand=>"Dior")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Louis Vuitton", bags_path(:brand=>"Louis Vuitton")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Hermès", bags_path(:brand=>"Hermès")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Yves Saint Laurent", bags_path(:brand=>"Yves Saint Laurent")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Prada", bags_path(:brand=>"Prada")%></a>
+              </div>
+            </div>
       </li>
       <li class="menu-item" role="none">
         <href class="">
-           <a role="menuitem"
+          <a role="menuitem"
           href="#">
-            Mood
           </a>
-        </href>
+            </href>
+            <div class="dropdown">
+              <button class="btn menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mood
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item brand-list"><%= link_to "Evening chic", bags_path(:mood=>"Evening chic")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Business Meeting", bags_path(:mood=>"Business Meeting")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Day in the countryside", bags_path(:mood=>"Day in the countryside")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Party", bags_path(:mood=>"Party")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Casual", bags_path(:mood=>"Casual")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Romantic date", bags_path(:mood=>"Romantic date")%></a>
+              </div>
+            </div>
+      </li>
+      <li class="menu-item" role="none">
+        <href class="">
+          <a role="menuitem"
+          href="#">
+          </a>
+            </href>
+            <div class="dropdown">
+              <button class="btn menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Style
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item brand-list"><%= link_to "Handbag", bags_path(:style=>"Handbag")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Shoulder bag", bags_path(:style=>"Shoulder bag")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Clutch", bags_path(:style=>"Clutch")%></a>
+                <a class="dropdown-item brand-list"><%= link_to "Backpack", bags_path(:style=>"Backpack")%></a>
+              </div>
+            </div>
       </li>
       <li class="menu-item" role="none">
         <href class="">
@@ -77,5 +123,4 @@
         </href>
       </li>
     </ul>
-  </nav>
 </div>

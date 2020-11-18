@@ -1,14 +1,15 @@
 <div class="homepage-container">
 
-    <div class="col-6 homepage-campaign-cards" style="HEIGHT: 600px">
-      <a href="/bags"><%= cl_image_tag("VO0920_LastLook_09_tmbnpw", height: 600, width:780) %>Discover new styles</a>
+    <div class="col-6 homepage-campaign-cards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path "VO0920_LastLook_09_tmbnpw"%>')">
+      <div>
+        <%= link_to "DISCOVER NEW STYLES", bags_path%>
+      </div>
     </div>
 
-    <div class ="col-6 homepage-campaign-cards" style="HEIGHT: 600px">
-      <a href="/bags">
-       <h1><%= cl_image_tag("corey-tenold-photography-1153567_tykrg3", height: 600, width:800, crop: :fill) %>
-       FW2020 TRENDS</h1>
-     </a>
+    <div class ="col-6 homepage-campaign-cards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path "corey-tenold-photography-1153567_tykrg3" %>')">
+      <div>
+        <%= link_to "TRENDS", bags_path%>
+        </div>
     </div>
 </div>
 

@@ -96,31 +96,31 @@ div, h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.card-trip {
+.card-bag {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-bag > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-bag h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-bag p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-.card-trip .card-trip-infos {
+.card-bag .card-bag-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
