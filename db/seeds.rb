@@ -40,6 +40,9 @@ User.create!(email: "marine@gmail.com", first_name: "Marine", last_name: "Payet"
     availability: [true, false].sample,
     user_id: @user_new.id
     )
+  file = URI.open("https://source.unsplash.com/collection/8360089/300x300")
+  @bag_new.photo.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
+  @bag_new.save
 end
 puts "end bags"
 puts "start booking"
