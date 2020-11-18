@@ -1,1 +1,8 @@
 <p>Welcome on the user page</p>
+
+<h2>Bags offered by <%= @user.first_name %></h2>
+<ul>
+<% @user.bags.each do |bag| %>
+  <li><%= bag.title %></li>
+<% end %>
+</ul>

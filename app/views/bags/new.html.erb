@@ -1,15 +1,16 @@
-<p>This is where the form to add a bag will be</p>
+<h1>Let's add a new bag!</h1>
 
 <%= simple_form_for [@user, @bag] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :brand %>
-  <%= f.input :style %>
-  <%= f.input :mood %>
-  <%= f.input :description %>
-  <%= f.input :price %>
+  <%= f.input :title, :label=> "Title of your ad" %>
+  <%= f.input :brand, collection: Bag::BRAND, prompt: "Select a brand" %>
+  <%= f.input :style, collection: Bag::STYLE, as: :check_boxes, :label=> "Style (select 1 or more)" %>
+  <%= f.input :mood, collection: Bag::MOOD, as: :check_boxes, :label=> "Mood (select 1 or more)" %>
   <%= f.input :color %>
-  <%= f.input :availability %>
-  <%= f.submit "Add bag", class: "btn" %>
+  <%= f.input :description, :label=> "Give a little more details about your bag" %>
+  <%= f.input :price, :label=> "Price/day (in €)" %>
+  <%= f.input :availability, as: :radio_buttons, :label=> "Available" %>
+  <%= f.input :photo, as: :file, :label=> "Add a photo"  %>
+  <%= f.submit "Add bag", class: "btn btn-primary" %>
 <% end %>
 
 
