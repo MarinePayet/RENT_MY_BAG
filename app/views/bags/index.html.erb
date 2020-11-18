@@ -28,7 +28,7 @@
       <% @bags.each do |bag| %>
         <div class="col col-lg-4">
           <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <%= cl_image_tag bag.photo.key, alt: "alttext" %>
           <%#= cl_image_tag bag.photo.key, height: 300 %>
 
             <div class="card-trip-infos">
