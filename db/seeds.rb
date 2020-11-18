@@ -1,4 +1,6 @@
 require 'faker'
+require 'json'
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -27,6 +29,8 @@ end
 puts "user finish"
 puts "start bags"
 
+User.create!(email: "marine@gmail.com", first_name: "Marine", last_name: "Payet", address: "16 Villa Gaudelet, Paris", password: "123456")
+
 20.times do
   @bag_new = Bag.create!(
     title: Faker::Marketing.buzzwords,
@@ -38,13 +42,19 @@ puts "start bags"
     availability: [true, false].sample,
     user_id: @user_new.id
     )
+
+  file = URI.open("https://source.unsplash.com/collection/8360089/300x300")
+  @bag_new.photo.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
+  @bag_new.save
 end
+
 puts "end bags"
 puts "start booking"
 
 10.times do
   Booking.create!(
-    date_of_booking: ["10/01 to 12/01", "10/08 to 11/08", "10/03 to 23°03"].sample,
+    start_date: Faker::Date.forward(days: 365),
+    end_date: Faker::Date.forward(days: 365),
     user_id: @user_new.id,
     bag_id: @bag_new.id
     )

@@ -1,16 +1,19 @@
 class BookingsController < ApplicationController
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @bag = Bag.find(params[:bag_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = User.find(params[:user_id])
+    @booking.user = current_user
     @booking.bag = Bag.find(params[:bag_id])
     if @booking.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       render :new
     end
@@ -19,6 +22,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date_of_booking)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
