@@ -18,7 +18,7 @@
       <p><strong><em>More Infos</em></strong></p>
       <p class="card-title"> Color :<%= @bag.color %> </p>
       <p class="card-text">Mood : <%= @bag.mood %> </p>
-      <a href="#" class="btn btn-ghost2">Add to my cart</a>
+      <%= link_to "Book now", new_bag_booking_path(@bag), class: "btn btn-ghost2" %>
       <a href="#" class="btn btn-ghost2">Ask seller</a>
     </div>
   </div>

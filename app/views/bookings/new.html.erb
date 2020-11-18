@@ -1,4 +1,19 @@
-<%= simple_form_for [@user, @bag, @booking] do |f| %>
+<%= simple_form_for [@bag, @booking] do |f| %>
   <%= f.input :date_of_booking %>
-  <%= f.submit "Book the bag", class: "btn btn-primary" %>
+  <%= f.submit "Book", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-ghost2"} %>
+      <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Your booking is confirmed!</h4>
+              </div>
+              <div class="modal-body">
+                <p>The owner will contact you shortly</p>
+              </div>
+              <div class="modal-footer">
+                <%= link_to "Homepage", root_path, class: "btn btn-ghost2"%>
+              </div>
+          </div>
+        </div>
+      </div>
 <% end %>
