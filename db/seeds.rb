@@ -35,7 +35,7 @@ puts "start bags"
     style: ["handbag", "clutch", "tote", "doctor"].sample,
     mood: ["Cocktail", "Wedding", "Daytime"].sample,
     color: Faker::Color.color_name,
-    availability: true,
+    availability: [true, false].sample,
     user_id: @user_new.id
     )
 end

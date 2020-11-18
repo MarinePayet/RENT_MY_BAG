@@ -1,14 +1,30 @@
 // Specific CSS for your home-page
 .homepage-container{
-  margin: 10px 15px;
+  display: flex;
+  background-color: white;
+  box-sizing: content-box;
+  border: solid #c1bebe 1px;
+  align-items: center;
+  width: 100%
 }
 
-.homepage-container h1 {
-  margin: 10px;
-  font-family: 'Playfair Display', serif;
+.homepage-campaign-cards {
+  background-image: url('https://source.unsplash.com/random/clothing');
+  background-image: cover;
+  background-color: white;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px 0px;
 }
 
-.homepage-container p {
-  margin: 10px;
+.homepage-campaign-cards a {
+  color: black;
+  font-weight: bold;
   font-family: 'Playfair Display', serif;
+  font-size: 30px;
 }
+
+
+

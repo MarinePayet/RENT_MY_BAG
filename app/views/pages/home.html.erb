@@ -1,17 +1,14 @@
-<div class="div container homepage-container">
-  <div class="row">
-    <div class="col-6 offset-3">
-      <h1>Pages#home</h1>
-      <p>Find me in app/views/pages/home.html.erb</p>
-    </div>
-  </div>
+<div class="homepage-container">
 
-  <div class="row">
-    <div class="col-6 offset-3">
-      <div class ="homepage-cards">
-        <p>Cards we want : </p>
-        <p>link to special theme search "sac de soirée</p>
-      </div>
+    <div class="col-6 homepage-campaign-cards" style="HEIGHT: 600px">
+      <a href="/bags"><%= cl_image_tag("VO0920_LastLook_09_tmbnpw", height: 600, width:780) %>Discover new styles</a>
     </div>
-  </div>
+
+    <div class ="col-6 homepage-campaign-cards" style="HEIGHT: 600px">
+      <a href="/bags">
+       <h1><%= cl_image_tag("corey-tenold-photography-1153567_tykrg3", height: 600, width:800, crop: :fill) %>
+       FW2020 TRENDS</h1>
+     </a>
+    </div>
 </div>
+

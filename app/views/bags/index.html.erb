@@ -1,1 +1,52 @@
-<p>Welcome on the Bags' index page</p>
+<h1>Here are all the bags</h1>
+
+
+<!-- <div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brand</button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Prada</a>
+    <a class="dropdown-item" href="#">Gucci</a>
+    <a class="dropdown-item" href="#">Louis Vuitton</a>
+  </div>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Style</button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Prada</a>
+    <a class="dropdown-item" href="#">Gucci</a>
+    <a class="dropdown-item" href="#">Louis Vuitton</a>
+  </div>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mood</button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Prada</a>
+    <a class="dropdown-item" href="#">Gucci</a>
+    <a class="dropdown-item" href="#">Louis Vuitton</a>
+  </div>
+</div> -->
+
+
+<div class="container">
+    <div class="row">
+      <% @bags.each do |bag| %>
+        <div class="col col-lg-4">
+          <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <%#= cl_image_tag bag.photo.key, height: 300 %>
+
+            <div class="card-trip-infos">
+              <div>
+                <%= link_to bag.title, bag_path(bag[:id]) %>
+                  <% if bag.availability %>
+                  <i class="fas fa-circle" style="color:green"></i>
+                  <% else %>
+                  <i class="fas fa-circle" style="color:red"></i>
+                  <% end %>
+                <br>
+                <%= bag.brand %>
+              </div>
+                <h2 class="card-trip-pricing"><%= bag.price %>€/day</h2>
+              </div>
+            </div>
+            </div>
+      <% end %>
+       </div>
+      </div>
+</div>

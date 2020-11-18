@@ -1,5 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-rent-my-bag">
-  <a class="navbar-brand" href="#">
+
+  <a class="navbar-brand" href="/bags">
+
     <h1><%= cl_image_tag("https://res.cloudinary.com/chiaramtr/image/upload/ar_1:1,b_rgb:ffffff,bo_5px_solid_rgb:151313,c_fill,g_auto,r_max,w_1000/v1605542217/BB50F0B0WD001-01-01_q4cjgn.jpg", height: 50, width: 70) %>
     Rent My Bag</h1>
 </a>
@@ -7,7 +9,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse first-header" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active sign_in">
@@ -20,15 +22,11 @@
         <a class="nav-link" href="#"><%= render "shared/login_items" %></a>
       </li>
 
-      <li class="nav-item active">
-        <a class="nav-link" href="#">My account</a>
-      </li>
-
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://source.unsplash.com/1600x900/?headshot" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item"><%= link_to "My bags"%> </a>
+          <a class="dropdown-item"><%= link_to "My bookings"%></a>
         </div>
       </li>
     </ul>
@@ -37,16 +35,16 @@
 
 <div class="second-header">
   <nav>
-    <ul role="menubar list-item inline">
-      <li role="none">
+    <ul class="menubar" role="menubar list-item inline">
+      <li class="menu-item" role="none">
         <href class="">
           <a role="menuitem"
-          href="#">
-            New
+          href="/bags">
+            Bags
           </a>
         </href>
       </li>
-      <li role="none">
+      <li class="menu-item" role="none">
         <href class="">
           <a role="menuitem"
           href="#">
@@ -54,7 +52,7 @@
           </a>
         </href>
       </li>
-      <li role="none">
+      <li class="menu-item" role="none">
         <href class="">
            <a role="menuitem"
           href="#">
@@ -62,7 +60,7 @@
           </a>
         </href>
       </li>
-      <li role="none">
+      <li class="menu-item" role="none">
         <href class="">
            <a role="menuitem"
           href="#">
@@ -70,7 +68,7 @@
           </a>
         </href>
       </li>
-      <li role="none">
+      <li class="menu-item" role="none">
         <href class="">
            <a role="menuitem"
           href="#">

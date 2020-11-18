@@ -1,7 +1,7 @@
 class BagsController < ApplicationController
 
   def index
-    @bags = Bag.all
+    @bags = Bag.all.order(created_at: :desc)
   end
 
   def new
@@ -25,6 +25,6 @@ class BagsController < ApplicationController
   private
 
   def bag_params
-    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :style, :color, :mood)
+    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :style, :color, :mood, :photo)
   end
 end
