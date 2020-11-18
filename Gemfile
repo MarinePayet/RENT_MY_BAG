@@ -33,6 +33,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'faker'
+gem 'cloudinary', '~> 1.16.0'
+
 
 
 group :development, :test do
@@ -52,7 +54,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails', groups: [:development, :test]
-  gem 'cloudinary', '~> 1.16.0'
 
 end
 
