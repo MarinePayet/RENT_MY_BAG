@@ -27,6 +27,8 @@ end
 puts "user finish"
 puts "start bags"
 
+User.create!(email: "marine@gmail.com", first_name: "Marine", last_name: "Payet", address: "16 Villa Gaudelet, Paris", password: "123456")
+
 20.times do
   @bag_new = Bag.create!(
     title: Faker::Marketing.buzzwords,
@@ -44,7 +46,8 @@ puts "start booking"
 
 10.times do
   Booking.create!(
-    date_of_booking: ["10/01 to 12/01", "10/08 to 11/08", "10/03 to 23°03"].sample,
+    start_date: Faker::Date.forward(days: 365),
+    end_date: Faker::Date.forward(days: 365),
     user_id: @user_new.id,
     bag_id: @bag_new.id
     )
