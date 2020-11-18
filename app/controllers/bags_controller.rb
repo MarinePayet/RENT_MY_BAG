@@ -20,6 +20,7 @@ class BagsController < ApplicationController
 
   def show
     @bag = Bag.find(params[:id])
+    @user = @bag.user
   end
 
   private

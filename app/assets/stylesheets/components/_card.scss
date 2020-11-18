@@ -10,7 +10,8 @@ div, h1, h2, h3, h4, h5, h6 {
 
 .flexbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100vw;
   align-items: center;
 }
 
@@ -29,10 +30,7 @@ div, h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-.card{
-  border: 1px solid black;
-  background-color: none;
-}
+
 
 .btn-ghost2 {
   color: #4A4A4A;
@@ -50,6 +48,22 @@ div, h1, h2, h3, h4, h5, h6 {
 .btn-ghost2:hover {
   opacity: 1;
 }
+
+.like {
+  color: #4A4A4A;
+  padding: 3px 7px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 22px;
+  width: 55px;
+}
+
+.like:hover {
+  color: red;
+}
+
 .border-bottom {
   border-bottom: 1px solid grey;
 }
@@ -113,3 +127,23 @@ div, h1, h2, h3, h4, h5, h6 {
   align-items: flex-end;
   position: relative;
 }
+.card {
+  border: 0 solid rgba(#000, .2);
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.image-box {
+  width: 5%;
+}
+
+.image-box-user {
+  width: 186%;
+}
+.card-box {
+  width: 40%;
+}
+
+

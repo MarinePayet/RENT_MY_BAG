@@ -3,23 +3,24 @@
 <div class="text-center">
   <h1>  <%= @bag.brand %> </h1>
   <h6> <%= @bag.title %> </h6>
-  <a href="#" class="btn btn-ghost">Favorite</a>
 </div>
 
 <div><br></div>
 
 <div class="flexbox">
-  <div> <img src="/fendi.jpeg" class="card-img-top" alt="..."></div>
-  <div class="card " style="width: 50rem;">
+  <div class="image-box"> <%= cl_image_tag @bag.photo.key %></div>
+  <!-- <div class="image-box"> <%#= image_tag "fendi.jpeg", class: "card-img-top" %></div> -->
+  <div class="card card-box" style="width: 40%;">
     <div class="card-body">
       <h5 class="card-title"> <%= @bag.title %> </h5>
       <h6 class="card-title"> Price per day <%= @bag.price %> </h6>
       <div><br></div>
       <p><strong><em>More Infos</em></strong></p>
-      <p class="card-title"> Color :<%= @bag.color %> </p>
+      <p class="card-title"> Color : <%= @bag.color.capitalize %> </p>
       <p class="card-text">Mood : <%= @bag.mood %> </p>
       <a href="#" class="btn btn-ghost2">Add to my cart</a>
       <a href="#" class="btn btn-ghost2">Ask seller</a>
+      <i class="far fa-heart like"> </i>
     </div>
   </div>
 </div>
@@ -27,24 +28,25 @@
 <div><br></div>
 
 <div class="flexbox group">
-  <div> <img src="/fendi.jpeg" class="card-img-top" alt="..."></div>
+  <div class="image-box"> <%= image_tag "https://source.unsplash.com/collection/162326/400x400", class: "image-box-user" %></div>
   <div class="card " style="width: 50rem;">
     <div class="card-body ">
-      <h5 class="card-title border-bottom">Description : <%= @bag.description %> </h5>
+      <h5 class="card-title ">Description : <%= @bag.description %> </h5>
+      <h5 class="card-title border-bottom"><%= @bag.description %> </h5>
       <h6 class="card-title">  </h6>
       <div><br></div>
       <p><strong><em></em></strong></p>
       <ul>
-        <li>Since : <%= @bag.created_at %> </li>
+        <li>Since : <%= @bag.created_at.strftime("%d %b. %Y") %> </li>
         <li>Universe : Femme</li>
-        <li>Style : <%= @bag.style %> </li>
+        <li>Style : <%= @bag.style.capitalize %> </li>
         <li>Under category : </li>
-        <li>Brand : <%= @bag.brand %> </li>
-        <li>Model :</li>
+        <li>Brand : <%= @bag.brand.capitalize %> </li>
+        <li>Model : </li>
         <li>Condition : Like new</li>
-        <li>Material : leather</li>
-        <li>Color : <%= @bag.color %> </li>
-        <li>Location : <%#= @user.address %> </li>
+        <li>Material : leather </li>
+        <li>Color : <%= @bag.color.capitalize %> </li>
+        <li>Location : <%= @user.address %> </li>
         <li>Dimension :</li>
       </ul>
       <p class="card-title">  </p>

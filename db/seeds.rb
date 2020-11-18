@@ -1,4 +1,6 @@
 require 'faker'
+require 'json'
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -38,7 +40,12 @@ puts "start bags"
     availability: [true, false].sample,
     user_id: @user_new.id
     )
+
+  file = URI.open("https://source.unsplash.com/collection/8360089/300x300")
+  @bag_new.photo.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
+  @bag_new.save
 end
+
 puts "end bags"
 puts "start booking"
 
