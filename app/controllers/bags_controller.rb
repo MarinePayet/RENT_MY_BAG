@@ -1,7 +1,7 @@
 class BagsController < ApplicationController
 
   def index
-    @bags = Bag.all
+    @bags = Bag.all.order(created_at: :desc)
   end
 
   def new
