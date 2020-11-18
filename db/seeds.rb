@@ -44,8 +44,8 @@ puts "start booking"
 
 10.times do
   Booking.create!(
-    date_of_booking: ["10/01 to 12/01", "10/08 to 11/08", "10/03 to 23°03"].sample
-    user_id: @user_new.id
+    date_of_booking: ["10/01 to 12/01", "10/08 to 11/08", "10/03 to 23°03"].sample,
+    user_id: @user_new.id,
     bag_id: @bag_new.id
     )
 end
