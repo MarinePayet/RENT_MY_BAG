@@ -9,21 +9,25 @@
 }
 
 .homepage-campaign-cards {
-  background-image: url('https://source.unsplash.com/random/clothing');
-  background-image: cover;
+  background-image: fill;
   background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
   flex-grow: 1;
-  width: 100%;
-  height: 100%;
+  display : flex;
+  justify-content: center;
+  align-items :center;
+  width: 50%;
+  height: 900px;
   margin: 0px;
   padding: 0px 0px;
 }
 
 .homepage-campaign-cards a {
-  color: black;
+  color: white;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 

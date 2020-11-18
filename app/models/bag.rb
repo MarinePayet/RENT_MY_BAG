@@ -5,6 +5,7 @@ class Bag < ApplicationRecord
 
   validates :title, :brand, :price, presence: true
 
+
   BRAND = [ "Chanel", "Chloé", "Lanvin", "Givenchy", "Dior", "Louis Vuitton", "Hermès", "Burberry", "Yves Saint Laurent", "Prada" ]
   MOOD = [ "Evening chic", "Business Meeting", "Day in the countryside", "Party", "Casual", "Romantic date" ]
   STYLE = [ "Handbag", "Shoulder bag", "Clutch", "Backpack" ]
