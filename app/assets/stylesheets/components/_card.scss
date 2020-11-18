@@ -10,6 +10,13 @@ div, h1, h2, h3, h4, h5, h6 {
 
 .flexbox {
   display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  align-items: center;
+}
+
+.flexbox1 {
+  display: flex;
   justify-content: space-evenly;
   width: 100vw;
   align-items: center;

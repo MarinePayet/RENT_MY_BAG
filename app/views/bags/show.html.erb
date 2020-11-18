@@ -1,14 +1,8 @@
-<p>This is a bag page</p>
-
-<div class="text-center">
-  <h1>  <%= @bag.brand %> </h1>
-  <h6> <%= @bag.title %> </h6>
-</div>
 
 <div><br></div>
 
 <div class="flexbox">
-  <div class="image-box"> <%= cl_image_tag @bag.photo.key %></div>
+  <div class="image-box"> <%= cl_image_tag @bag.photo.key, width: 500 %></div>
   <!-- <div class="image-box"> <%#= image_tag "fendi.jpeg", class: "card-img-top" %></div> -->
   <div class="card card-box" style="width: 40%;">
     <div class="card-body">
@@ -27,11 +21,11 @@
 
 <div><br></div>
 
-<div class="flexbox group">
+<div class="flexbox1 group">
   <div class="image-box"> <%= image_tag "https://source.unsplash.com/collection/162326/400x400", class: "image-box-user" %></div>
   <div class="card " style="width: 50rem;">
     <div class="card-body ">
-      <h5 class="card-title ">Description : <%= @bag.description %> </h5>
+      <h5 class="card-title ">Description : </h5>
       <h5 class="card-title border-bottom"><%= @bag.description %> </h5>
       <h6 class="card-title">  </h6>
       <div><br></div>
