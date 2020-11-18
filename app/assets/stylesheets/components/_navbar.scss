@@ -23,7 +23,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
 }
 
@@ -35,12 +35,18 @@
   padding: 5px;
   display: flex;
   justify-content: space-evenly;
+  display: flex;
+  width: 100%
+}
+
+.menu-item {
+  flex-grow: 1;
   align-items: center;
 }
 
 .second-header a{
   font-family: 'Playfair Display', serif;
-  font-size: 15px;
+  font-size: 23px;
   color: black
 }
 
