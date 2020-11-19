@@ -19,6 +19,32 @@
   font-size: 20px;
 }
 
+.fa-heart:before {
+    content: "\f004";
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link a{
+  color: black;
+}
+
+.dropdown-menu a {
+  color: #4d4848;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
 ul.menubar {
   display: flex;
   justify-content: space-evenly;
@@ -40,6 +66,13 @@ ul.menubar {
   align-items: center;
 }
 
+.menu-item a {
+  font-size: 23px;
+  font-family: 'Playfair Display', serif;
+  color: black;
+  text-decoration: none;
+}
+
 .second-header a{
   font-family: 'Playfair Display', serif;
   font-size: 23px;
@@ -53,4 +86,22 @@ ul.menubar {
 
 .nav-item a {
   color: black;
+}
+
+ul.menubar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.btn {
+  font-size: 23px;
+  line-height: 0;
+  margin-top: 11px;
+}
+
+.dropdown a{
+  color: #454242;
+  font-size: 20px;
+  padding: 10px;
 }
