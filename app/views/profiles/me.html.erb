@@ -11,8 +11,7 @@
         <div class="col col-lg-4">
 
           <div class="card-bag">
-          <%= cl_image_tag bag.photo.key, alt: "alttext" %>
-
+            <%= image_tag bag.images[0], height: 500, width: 700, alt:"bag-photo" %>
             <div class="card-bag-infos">
               <div>
                 <%= link_to bag.title, bag_path(bag[:id]) %>
