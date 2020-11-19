@@ -22,61 +22,13 @@ div, h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 5px 7px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  font-size: 10px;
-}
-
-.btn-ghost:hover {
-  opacity: 1;
-}
-
-
-
-.btn-ghost2 {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 5px 7px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  font-size: 15px;
-  width: 126px;
-
-}
-
-.btn-ghost2:hover {
-  opacity: 1;
-}
-
-.like {
-  color: #4A4A4A;
-  padding: 3px 7px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  font-size: 22px;
-  width: 55px;
-}
-
-.like:hover {
-  color: red;
-}
-
 .border-bottom {
   border-bottom: 1px solid grey;
 }
 
 .list-group-item {
   width: 300px;
+  margin: 5px;
 }
 
 .badge, .badge-pill {
@@ -84,13 +36,6 @@ div, h1, h2, h3, h4, h5, h6 {
   text-align: right;
   align-item: right;
   justify-content: space-between;
-}
-
-.btn-secondary {
-  background-color: white;
-  color: black;
-  width: 172px;
-  text-align: left;
 }
 
 .text {
@@ -143,7 +88,7 @@ div, h1, h2, h3, h4, h5, h6 {
 }
 
 .image-box {
-  width: 5%;
+  width: 7%;
 }
 
 .image-box-user {
@@ -152,5 +97,3 @@ div, h1, h2, h3, h4, h5, h6 {
 .card-box {
   width: 40%;
 }
-
-
