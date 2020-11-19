@@ -1,0 +1,13 @@
+<h1>this are the bags of the users and its booking</h1>
+
+<% @bags.each do |bag| %>
+  <%= bag.brand %>
+   <%= link_to "delete", bag_path(bag), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
+
+
+<%# @bookings.each do |booking| %>
+  <%# booking.each %>
+  <%#link_to "delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } %>
+<%#end %>
+
