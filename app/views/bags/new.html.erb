@@ -1,16 +1,28 @@
-<div class="flexbox mt-4"> <h1 class="text">Let's add a new bag!</h1></div>
 
-<div class= "container">
-  <%= simple_form_for [@user, @bag] do |f| %>
-    <%= f.input :title, :label=> "Title of your ad", input_html: { class: "input-bar"} %>
-    <%= f.input :brand, collection: Bag::BRAND, prompt: "Select a brand", input_html: { class: "input-bar"}%>
-    <%= f.input :style, collection: Bag::STYLE, as: :check_boxes, :label=> "Style (select 1 or more)", input_html: { class: "input-label"}%>
-    <%= f.input :mood, collection: Bag::MOOD, as: :check_boxes, :label=> "Mood (select 1 or more)" %>
-    <%= f.input :color, input_html: { class: "input-bar"} %>
-    <%= f.input :description, :label=> "Give a little more details about your bag", input_html: { class: "input-bar"} %>
-    <%= f.input :price, :label=> "Price/day (in €)", input_html: { class: "input-bar"} %>
-    <%= f.input :availability, as: :radio_buttons, :label=> "Available" %>
-    <%= f.input :photo, as: :file, :label=> "Add a photo"  %>
-    <%= f.submit "Add bag", class: "btn btn-ghost2" %>
-  <% end %>
+
+<div class= "container1">
+
+
+    <div class="form">
+      <%= simple_form_for [@user, @bag] do |f| %>
+        <%= f.input :title, :label=> "Title of your ad", input_html: { class: "input-bar"} %>
+        <%= f.input :brand, collection: Bag::BRAND, prompt: "Select a brand", input_html: { class: "input-bar"}%>
+        <%= f.input :style, collection: Bag::STYLE, as: :check_boxes, :label=> "Style (select 1 or more)", input_html: { class: "input-label"}%>
+        <%= f.input :mood, collection: Bag::MOOD, as: :check_boxes, :label=> "Mood (select 1 or more)" %>
+        <%= f.input :color, input_html: { class: "input-bar"} %>
+        <%= f.input :description, :label=> "Give a little more details about your bag", input_html: { class: "input-bar"} %>
+        <%= f.input :price, :label=> "Price/day (in €)", input_html: { class: "input-bar"} %>
+        <%= f.input :availability, as: :radio_buttons, :label=> "Available" %>
+        <%= f.input :photo, as: :file, :label=> "Add a photo"  %>
+        <%= f.submit "Add bag", class: "btn-other btn-ghost2" %>
+      <% end %>
+    </div>
+
 </div>
+
+
+<!-- <div class="container">
+      <div id="movies">
+
+      </div>
+</div> -->

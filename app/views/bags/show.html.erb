@@ -3,26 +3,29 @@
 
 <div class="flexbox">
   <div class="image-box"> <%= cl_image_tag @bag.photo.key, width: 500 %></div>
-  <!-- <div class="image-box"> <%#= image_tag "fendi.jpeg", class: "card-img-top" %></div> -->
   <div class="card card-box" style="width: 40%;">
     <div class="card-body">
       <h5 class="card-title"> <%= @bag.title %> </h5>
       <h6 class="card-title"> Price per day <%= @bag.price %> </h6>
-      <div><br></div>
-      <p><strong><em>More Infos</em></strong></p>
       <p class="card-title"> Color : <%= @bag.color.capitalize %> </p>
          <p class="card-text"> Mood :
                 <% @bag.mood.each do |mood| %>
                 <%= mood %> |
                 <% end %></p>
+        <p>Style :
+                <% @bag.style.each do |style| %>
+                <%= style %> |
+                <% end %></p>
 
-      <%= link_to "Book now", new_bag_booking_path(@bag), class: "btn btn-ghost2" %>
-      <a href="#" class="btn-ghost2">Ask seller</a>
+      <%= link_to "Book now", new_bag_booking_path(@bag), class: "btn-other btn-ghost2" %>
+      <a href="#" class="btn-other btn-ghost2">Ask seller</a>
       <i class="far fa-heart like"> </i>
     </div>
   </div>
 </div>
 
+<div><br></div>
+<div><br></div>
 <div><br></div>
 
 <div class="flexbox1 group">
@@ -38,18 +41,12 @@
       <ul>
         <li>Since : <%= @bag.created_at.strftime("%d %b. %Y") %> </li>
         <li>Universe : Femme</li>
-        <li>Style :
-                <% @bag.style.each do |style| %>
-                <%= style %> |
-                <% end %></li>
-        <li>Under category : </li>
         <li>Brand : <%= @bag.brand %> </li>
-        <li>Model : </li>
         <li>Condition : Like new</li>
         <li>Material : leather </li>
         <li>Color : <%= @bag.color.capitalize %> </li>
         <li>Location : <%= @user.address %> </li>
-        <li>Dimension :</li>
+        <li>Dimension : 36,5 cm x 28 cm x 17,5 cm</li>
       </ul>
       <p class="card-title">  </p>
       <a href="#">A question or a comment ? Add a review</a>
