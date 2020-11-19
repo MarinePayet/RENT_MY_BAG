@@ -37,7 +37,8 @@
       <p><strong><em></em></strong></p>
       <ul>
         <li>Since : <%= @bag.created_at.strftime("%d %b. %Y") %> </li>
-        <li>Universe : Femme</li><li>Style :
+        <li>Universe : Femme</li>
+        <li>Style :
                 <% @bag.style.each do |style| %>
                 <%= style %> |
                 <% end %></li>
