@@ -22,11 +22,12 @@
 <div><br></div>
 
 <div class="flexbox1 group">
-  <div class="image-box"> <%= image_tag "https://source.unsplash.com/collection/162326/400x400", class: "image-box-user" %></div>
+  <div class="image-box"> <%= @user.first_name %>
+    <%= image_tag "https://source.unsplash.com/collection/162326/400x400", class: "image-box-user avatar-square" %></div>
   <div class="card " style="width: 50rem;">
     <div class="card-body ">
       <h5 class="card-title ">Description : </h5>
-      <h5 class="card-title border-bottom"><%= @bag.description %> </h5>
+      <h6 class="card-title border-bottom"><%= @bag.description %> </h6>
       <h6 class="card-title">  </h6>
       <div><br></div>
       <p><strong><em></em></strong></p>
