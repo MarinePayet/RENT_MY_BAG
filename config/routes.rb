@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       resources :bookings, only: [:show, :new, :create]
     end
   resources :bags, only: [:index]
+  resources :bookings, only: [:destroy]
   get "profile", to: "profiles#me", as: :profile
 end

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def new
     @user = current_user
     @bag = Bag.find(params[:bag_id])
@@ -24,6 +25,11 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def index
+    @user = current_user
+    @bookings = Booking.where(user_id: @user.id)
   end
 
   private
