@@ -1,4 +1,4 @@
-<h1>Here are all the bags</h1>
+<h1>👜 Check out all our bags 👜</h1>
 
 
 <!-- <div class="btn-group">
@@ -27,10 +27,8 @@
     <div class="row">
       <% @bags.each do |bag| %>
         <div class="col col-lg-4">
-
           <div class="card-bag">
-          <%= cl_image_tag bag.photo.key, alt: "alttext" %>
-
+            <%= image_tag bag.images[0], height: 500, width: 700 %>
             <div class="card-bag-infos">
               <div>
                 <%= link_to bag.title, bag_path(bag[:id]) %>

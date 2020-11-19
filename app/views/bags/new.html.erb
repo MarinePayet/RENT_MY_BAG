@@ -10,7 +10,7 @@
     <%= f.input :description, :label=> "Give a little more details about your bag", input_html: { class: "input-bar"} %>
     <%= f.input :price, :label=> "Price/day (in €)", input_html: { class: "input-bar"} %>
     <%= f.input :availability, as: :radio_buttons, :label=> "Available" %>
-    <%= f.input :photo, as: :file, :label=> "Add a photo"  %>
+    <%= f.file_field :images, multiple: true %>
     <%= f.submit "Add bag", class: "btn btn-ghost2" %>
   <% end %>
 </div>

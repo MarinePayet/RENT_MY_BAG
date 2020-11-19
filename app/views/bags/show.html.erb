@@ -2,7 +2,31 @@
 <div><br></div>
 
 <div class="flexbox">
-  <div class="image-box"> <%= cl_image_tag @bag.photo.key, width: 500 %></div>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:700px" >
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+     <% @bag.images.each_with_index do |image, index| %>
+        <div class="carousel-item <%= "active" if index == 0%>">
+          <%= image_tag image, height: 500, width: 700 %>
+        </div>
+      <% end %>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
   <!-- <div class="image-box"> <%#= image_tag "fendi.jpeg", class: "card-img-top" %></div> -->
   <div class="card card-box" style="width: 40%;">
     <div class="card-body">
