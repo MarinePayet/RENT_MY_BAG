@@ -44,7 +44,15 @@ User.create!(email: "marine@gmail.com", first_name: "Marine", last_name: "Payet"
     )
 
   file = URI.open("https://source.unsplash.com/collection/8360089/300x300")
-  @bag_new.photo.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
+  @bag_new.images.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
+  @bag_new.save
+
+  file = URI.open("https://source.unsplash.com/collection/8360089/300x300")
+  @bag_new.images.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
+  @bag_new.save
+
+  file = URI.open("https://source.unsplash.com/collection/8360089/300x300")
+  @bag_new.images.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
   @bag_new.save
 end
 
