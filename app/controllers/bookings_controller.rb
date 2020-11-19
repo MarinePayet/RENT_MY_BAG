@@ -3,6 +3,13 @@ class BookingsController < ApplicationController
     @user = current_user
     @bag = Bag.find(params[:bag_id])
     @booking = Booking.new
+    @bookings = Booking.where(bag_id: @bag.id)
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+    end
   end
 
   def create
