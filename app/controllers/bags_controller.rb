@@ -4,6 +4,10 @@ class BagsController < ApplicationController
     @bags = Bag.all.order(created_at: :desc)
     if params[:brand]
       @bags = Bag.where(:brand => params[:brand])
+    elsif params[:mood]
+      @bags = Bag.where(:mood => params[:mood])
+    elsif params[:style]
+      @bags = Bag.where(:style => params[:style])
     else
       @bags = Bag.all.order(created_at: :desc)
     end
