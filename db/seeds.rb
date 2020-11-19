@@ -36,8 +36,8 @@ User.create!(email: "marine@gmail.com", first_name: "Marine", last_name: "Payet"
     title: Faker::Marketing.buzzwords,
     brand: Bag::BRAND.sample,
     price: [30, 40, 50, 60].sample,
-    style: Bag::STYLE.sample,
-    mood: Bag::MOOD.sample,
+    style: [Bag::STYLE.sample],
+    mood: [Bag::MOOD.sample],
     color: Faker::Color.color_name,
     availability: [true, false].sample,
     user_id: @user_new.id
