@@ -87,17 +87,3 @@
 
 </div>
 
-<% require "open-uri" %>
-
-<%url_product = "https://fr.vestiairecollective.com/sacs-femme/sacs-a-main/loewe/sac-a-main-loewe-basket-bag-en-paille-beige-11562009.shtml"
-  html_file_product = open(url_product).read
-  html_doc_product = Nokogiri::HTML(html_file_product)
-  html_doc_product.search('.slider__container__item .image').each do |element|
-    link_product = element.attribute('src').value %>
-    <%= image_tag link_product %>
-  <% end %>
-
-
-
-
-
