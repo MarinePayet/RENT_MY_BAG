@@ -1,5 +1,3 @@
-<h1>👜 Check out all our bags 👜</h1>
-
 
 <!-- <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brand</button>
@@ -23,7 +21,7 @@
 </div> -->
 
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
       <% @bags.each do |bag| %>
         <div class="col col-lg-4">
@@ -43,7 +41,7 @@
                 <h2 class="card-bag-pricing"><%= bag.price %>€/day</h2>
               </div>
             </div>
-            </div>
+          </div>
       <% end %>
        </div>
       </div>

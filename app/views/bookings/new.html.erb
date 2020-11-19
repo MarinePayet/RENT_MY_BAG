@@ -1,10 +1,10 @@
 <div class="container">
   <div class="form-wrapper">
-    <h2>Book <%=@bag.user.first_name%>' bag</h2>
+    <h2>Book <%=@bag.user.first_name%>'s bag</h2>
     <%= simple_form_for [@bag, @booking] do |f| %>
       <%= f.input :start_date, label: "Pick your dates:", as: :string, required: false, input_html: { id: "range_start", class: "d-none"} %>
       <%= f.input :end_date, label: false, as: :string, required: false, input_html: { id: "range_end", class: "d-none" } %>
-      <%= f.button :submit, "Book", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-ghost2"} %>
+      <%= f.button :submit, "Book", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn-other btn-ghost2"} %>
       <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -15,7 +15,7 @@
                 <p>The owner will contact you shortly</p>
               </div>
               <div class="modal-footer">
-                <%= link_to "Homepage", root_path, class: "btn btn-ghost2"%>
+                <%= link_to "Homepage", root_path, class: "btn-other btn-ghost2"%>
               </div>
           </div>
         </div>
