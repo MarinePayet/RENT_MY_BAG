@@ -32,6 +32,12 @@ class BagsController < ApplicationController
     @user = @bag.user
   end
 
+  def destroy
+    @bag = Bag.find(params[:id])
+    @bag.destroy
+    redirect_to profile_path
+  end
+
   private
 
   def bag_params
