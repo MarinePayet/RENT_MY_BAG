@@ -4,6 +4,8 @@ class Bag < ApplicationRecord
   has_many_attached :images
 
   validates :title, :brand, :price, presence: true
+  serialize :mood
+  serialize :style
 
 
   BRAND = [ "Chanel", "Chloé", "Lanvin", "Givenchy", "Dior", "Louis Vuitton", "Hermès", "Burberry", "Yves Saint Laurent", "Prada", "Fendi" ]

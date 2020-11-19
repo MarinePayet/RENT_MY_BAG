@@ -32,9 +32,25 @@ class BagsController < ApplicationController
     @user = @bag.user
   end
 
+  def edit
+    @bag = Bag.find(params[:id])
+  end
+
+  def update
+    @bag = Bag.find(params[:id])
+    @bag.update(bag_params)
+    redirect_to profile_path
+  end
+
+  def destroy
+    @bag = Bag.find(params[:id])
+    @bag.destroy
+    redirect_to profile_path
+  end
+
   private
 
   def bag_params
-    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :style, :color, :mood, images: [])
+    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :color, images: [], mood: [], style: [])
   end
 end

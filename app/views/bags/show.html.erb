@@ -35,9 +35,13 @@
       <div><br></div>
       <p><strong><em>More Infos</em></strong></p>
       <p class="card-title"> Color : <%= @bag.color.capitalize %> </p>
-      <p class="card-text">Mood : <%= @bag.mood %> </p>
+         <p class="card-text"> Mood :
+                <% @bag.mood.each do |mood| %>
+                <%= mood %> |
+                <% end %></p>
+
       <%= link_to "Book now", new_bag_booking_path(@bag), class: "btn btn-ghost2" %>
-      <a href="#" class="btn btn-ghost2">Ask seller</a>
+      <a href="#" class="btn-ghost2">Ask seller</a>
       <i class="far fa-heart like"> </i>
     </div>
   </div>
@@ -58,7 +62,10 @@
       <ul>
         <li>Since : <%= @bag.created_at.strftime("%d %b. %Y") %> </li>
         <li>Universe : Femme</li>
-        <li>Style : <%= @bag.style %> </li>
+        <li>Style :
+                <% @bag.style.each do |style| %>
+                <%= style %> |
+                <% end %></li>
         <li>Under category : </li>
         <li>Brand : <%= @bag.brand %> </li>
         <li>Model : </li>
