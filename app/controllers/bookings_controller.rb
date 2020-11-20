@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def new
     @user = current_user
     @bag = Bag.find(params[:bag_id])

@@ -23,7 +23,7 @@
                 <%= bag.brand %>
               </div>
               <%= link_to "edit", edit_bag_path(bag)%>
-              <%= link_to "delete", bag_path(bag), method: :delete, data: { confirm: "Are you sure?" } %>
+              <%= link_to "delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } %>
                 <h2 class="card-bag-pricing"><%= bag.price %>€/day</h2>
               </div>
             </div>
@@ -38,6 +38,7 @@
   </div>
 
 </div>
+
 
 <div class="container">
   <div class="row">
@@ -57,6 +58,3 @@
     <% end %>
   </div>
 </div>
-
-
-
