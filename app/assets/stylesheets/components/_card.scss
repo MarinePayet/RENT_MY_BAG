@@ -114,7 +114,13 @@ div, h1, h2, h3, h4, h5, h6 {
 
 .card-user{
   height: 300px;
-  width: 400px;
+  width: 300px;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+  padding-top: 68px;
+  border-radius: 150px;
+  font-size:17px;
+}
 
 .fa-circle{
   margin-left: 10px;
