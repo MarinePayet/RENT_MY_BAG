@@ -51,19 +51,27 @@ div, h1, h2, h3, h4, h5, h6 {
 .card-bag {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+  height: 400px;
 }
 
 .card-bag > img {
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
+  object-position: 50% 100%;
 }
 
 .card-bag h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
+}
+
+.card-bag a{
+  text-decoration: none;
+  color: black;
 }
 
 .card-bag p {
@@ -72,8 +80,9 @@ div, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.card-bag .card-bag-infos {
-  padding: 16px;
+.card-bag-infos {
+  height: 80px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -101,4 +110,8 @@ div, h1, h2, h3, h4, h5, h6 {
 .col {
   margin-bottom: 30px;
   border-radius: 5px;
+}
+
+.fa-circle{
+  margin-left: 10px;
 }
