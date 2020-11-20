@@ -1,15 +1,21 @@
 class BagsController < ApplicationController
 
   def index
-    @bags = Bag.all.order(created_at: :desc)
+    all_bags = Bag.all.order(created_at: :desc)
     if params[:brand]
       @bags = Bag.where(:brand => params[:brand])
     elsif params[:mood]
-      @bags = Bag.where(:mood => params[:mood])
+      @bags = []
+      all_bags.each do |bag|
+        @bags << bag if bag.mood.include?(params[:mood])
+      end
     elsif params[:style]
-      @bags = Bag.where(:style => params[:style])
+      @bags = []
+      all_bags.each do |bag|
+        @bags << bag if bag.style.include?(params[:style])
+      end
     else
-      @bags = Bag.all.order(created_at: :desc)
+      @bags = all_bags
     end
   end
 
@@ -51,6 +57,6 @@ class BagsController < ApplicationController
   private
 
   def bag_params
-    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :color, :photo, mood: [], style: [])
+    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :color, images: [], mood: [], style: [])
   end
 end

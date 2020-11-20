@@ -14,9 +14,10 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @bag = Bag.find(params[:bag_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.bag = Bag.find(params[:bag_id])
+    @booking.bag = @bag
     if @booking.save
       respond_to do |format|
         format.html
@@ -27,12 +28,13 @@ class BookingsController < ApplicationController
     end
   end
 
-  def index
-    @user = current_user
-    @bookings = Booking.where(user_id: @user.id)
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to profile_path
   end
 
-  private
+   private
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)

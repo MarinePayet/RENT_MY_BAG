@@ -7,10 +7,12 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
   font-size: 10px;
+  text-decoration: none;
 }
 
 .btn-ghost:hover {
   opacity: 1;
+  text-decoration: none;
 }
 
 .btn-ghost2 {
@@ -23,15 +25,25 @@
   transition: opacity 0.3s ease;
   font-size: 15px;
   width: 126px;
+  text-decoration: none;
+}
+
+.btn-ghost2 a {
+  text-decoration: none;
 }
 
 .btn-ghost2:hover {
   opacity: 1;
+  text-decoration: none;
+   color: #4A4A4A;
 }
-
+.btn-ghost2:hover a {
+  text-decoration: none;
+  opacity: 1;
+  color: #4A4A4A;
+}
 .like {
   color: #4A4A4A;
-  padding: 3px 7px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
@@ -50,3 +62,17 @@
   width: 172px;
   text-align: left;
 }
+
+.btn {
+  font-size: 23px;
+//  line-height: 0;
+}
+
+.btn-other {
+  font-size: 15px;
+  //line-height: 0;
+  margin-top: 11px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+

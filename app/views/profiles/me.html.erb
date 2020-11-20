@@ -11,8 +11,7 @@
         <div class="col col-lg-4">
 
           <div class="card-bag">
-          <%= cl_image_tag bag.photo.key, alt: "alttext" %>
-
+            <%= image_tag bag.images[0], height: 500, width: 700, alt:"bag-photo" %>
             <div class="card-bag-infos">
               <div>
                 <%= link_to bag.title, bag_path(bag[:id]) %>
@@ -41,10 +40,12 @@
   </div>
 </div>
 
-<div class="">
-  <% @bookings.each do |booking| %>
-    <%= booking.bag.brand %>
-    <%link_to "delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } %>
-  <%end %>
-</div>
 
+<div class="container">
+  <div class="col col-lg-4">
+    <% @bookings.each do |booking| %>
+      <%= booking.bag.brand %>
+      <%=link_to "delete", bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    <%end %>
+  </div>
+</div>
