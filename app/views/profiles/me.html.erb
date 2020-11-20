@@ -13,7 +13,7 @@
             <%= image_tag bag.images[0], height: 500, width: 700, alt:"bag-photo" %>
             <div class="card-bag-infos">
               <div>
-                <%= link_to bag.title, bag_path(bag[:id]) %>
+                <%= link_to bag.title.upcase.first(20), bag_path(bag[:id]) %>
                   <% if bag.availability %>
                   <i class="fas fa-circle" style="color:green"></i>
                   <% else %>
@@ -22,9 +22,11 @@
                 <br>
                 <%= bag.brand %>
               </div>
-              <%= link_to "edit", edit_bag_path(bag)%>
-              <%=link_to "delete", bag_path(bag), method: :delete, data: { confirm: "Are you sure?" } %>
+              <div>
+              <%= link_to "<i class='fas fa-edit'></i>".html_safe, edit_bag_path(bag)%>
+              <%=link_to "<i class='fa fa-trash' aria-hidden='true'></i>".html_safe, bag_path(bag), method: :delete, data: { confirm: "Are you sure?" } %>
                 <h2 class="card-bag-pricing"><%= bag.price %>€/day</h2>
+              </div>
               </div>
             </div>
             </div>
@@ -50,7 +52,8 @@
             <div class="card-bag2">
               <%= booking.start_date.strftime("%d %b. %Y") %> -- <%= booking.end_date.strftime("%d %b. %Y") %>
               <br>
-            <%=link_to "delete", bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+              <%=link_to "<i class='fa fa-trash' aria-hidden='true'></i>".html_safe, bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
             </div>
 
       </div>
