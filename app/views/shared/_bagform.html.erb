@@ -1,14 +1,35 @@
-<div class= "container">
-  <%= simple_form_for [@user, @bag] do |f| %>
-    <%= f.input :title, :label=> "Title of your ad", input_html: { class: "input-bar"} %>
-    <%= f.input :brand, collection: Bag::BRAND, prompt: "Select a brand", input_html: { class: "input-bar"}%>
-    <%= f.input :style, collection: Bag::STYLE, as: :check_boxes, :label=> "Style (select 1 or more)", input_html: { class: "input-label"}%>
-    <%= f.input :mood, collection: Bag::MOOD, as: :check_boxes, :label=> "Mood (select 1 or more)" %>
-    <%= f.input :color, input_html: { class: "input-bar"} %>
-    <%= f.input :description, :label=> "Give a little more details about your bag", input_html: { class: "input-bar"} %>
-    <%= f.input :price, :label=> "Price/day (in €)", input_html: { class: "input-bar"} %>
-    <%= f.input :availability, as: :radio_buttons, :label=> "Available" %>
-    <%= f.input :photo, as: :file, :label=> "Add a photo"  %>
-    <%= f.submit "Add bag", class: "btn btn-ghost2" %>
+<div class= "container1">
+  <% if @bag.id %>
+    <h1>Edit your bag's info</h1>
+        <div class="shape large"></div>
+  <% else %>
+    <h1>Add a new bag</h1>
+    <div class="shape short"></div>
   <% end %>
+
+  <div class="form-background">
+    <div class="form">
+      <%= simple_form_for [@user, @bag] do |f| %>
+        <%= f.input :title, :label=> "Title of your ad", input_html: { class: "input-bar"}, wrapper_html: { class: "label-text"} %>
+        <%= f.input :brand, collection: Bag::BRAND, prompt: "Select a brand", input_html: { class: "input-bar"}, wrapper_html: { class: "label-text"}%>
+        <%= f.input :style, collection: Bag::STYLE, as: :check_boxes, :label=> "Style (select 1 or more)", input_html: { class: "input-label"}, label_html: {class: "input-label form-check-inline"}, wrapper_html: { class: "label-text"}, wrapper: :vertical_collection_inline, :item_wrapper_class => 'checkbox form-check-inline' %>
+        <div class="check">
+          <%= f.input :mood, collection: Bag::MOOD, as: :check_boxes, :label=> "Mood (select 1 or more)", input_html: { class: "input-label"}, label_html: {class: "input-label form-check-inline"}, wrapper_html: { class: "label-text"}, wrapper: :vertical_collection_inline, :item_wrapper_class => 'checkbox form-check-inline' %>
+        </div>
+        <%= f.input :color, input_html: { class: "input-bar label-text"}, wrapper_html: { class: "label-text"} %>
+        <%= f.input :description, :label=> "Give a little more details about your bag", input_html: { class: "input-bar"}, wrapper_html: { class: "label-text"} %>
+        <%= f.input :price, :label=> "Price/day (in €)", input_html: { min: '0', step: 'any', class: "input-bar"}, wrapper_html: { class: "label-text"} %>
+        <%= f.input :availability, as: :radio_buttons, :label=> "Available", input_html: { class: "input-label"}, label_html: {class: "input-label form-check-inline"}, wrapper_html: { class: "label-text"}, wrapper: :vertical_collection_inline, :item_wrapper_class => 'checkbox form-check-inline' %>
+        <%= f.file_field :images, multiple: true, input_html: { name: 'Add photo(s)'} %>
+        <br>
+        <div class="btn-center">
+          <% if @bag.id %>
+            <%= f.submit "Edit bag", class: "btn-other btn-ghost2 btn-form" %>
+          <% else %>
+            <%= f.submit "Add bag", class: "btn-other btn-ghost2 btn-form" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
