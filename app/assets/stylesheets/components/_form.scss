@@ -10,15 +10,61 @@
   color:blue
 }
 
-.form {
-
-   // background-color: red;
-    width: 50%;
-    margin: auto;
-}
-
 .container1 {
-//  background-color: blue;
   width: 1419px;
   padding-top: 50px;
   }
+
+.container1 > h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -15px;
+  font-size: 38px;
+}
+
+.form-background {
+  background: #ffffffd9;
+  width: 800px;
+  padding: 34px 13px;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.form {
+  width: 90%;
+  margin: auto;
+}
+.label-text {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.checkbox {
+  font-weight : 200;
+  font-size: 15px;
+}
+
+.btn-center {
+  padding: 10px;
+  text-align: center;
+}
+
+.check {
+  width: 70%;
+}
+
+.shape {
+  background-color: #c0aeae80;
+  height: 20px;
+  margin: auto;
+  margin-top: -48px;
+  margin-bottom: 33px;
+}
+
+.large {
+  width: 343px;
+}
+
+.short {
+  width: 264px;
+}
