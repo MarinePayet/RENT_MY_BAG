@@ -10,22 +10,22 @@
   </button>
 
   <div class="collapse navbar-collapse first-header" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto", style="align-items: center;">
 
       <li class="nav-item-first-navbar active sign_in">
         <% if user_signed_in? %>
-          <a class="nav-link"><i class="fas fa-heart"></i><%= link_to "", new_bag_path(@bag) %></a>
+          <a class="nav-link"><i class="fas fa-heart", style="color: #4a4a4a99"></i><%= link_to "", new_bag_path(@bag) %></a>
         <% end %>
       </li>
 
-      <li class="nav-item active sign_in">
+      <li class="active sign_in nav-button-filled">
         <% if user_signed_in? %>
-        <a class="nav-link"><%= link_to "Add your bag", new_bag_path %></a>
+        <a><%= link_to "Add a bag", new_bag_path, class: "nav-button-text-filled" %></a>
         <% end %>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link nav-item-first-navbar" href="#"><%= render "shared/login_items" %></a>
+        <a href="#"><%= render "shared/login_items" %></a>
       </li>
 
       <li class="nav-item dropdown">
