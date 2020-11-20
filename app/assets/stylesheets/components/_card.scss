@@ -54,7 +54,14 @@ div, h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 8px rgba(0,0,0,0);
   height: 400px;
 }
-
+.card-bag2 {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0);
+  height: auto;
+  width:250px;
+  text-align: center;
+}
 .card-bag > img {
   height: 300px;
   width: 100%;
@@ -113,9 +120,15 @@ div, h1, h2, h3, h4, h5, h6 {
 }
 
 .card-user{
-  height: 300px;
-  width: 400px;
+  height: 250px;
+  width: 250px;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+  padding-top: 68px;
+  border-radius: 150px;
+  font-size:17px;
 }
+
 .fa-circle{
   margin-left: 10px;
 
