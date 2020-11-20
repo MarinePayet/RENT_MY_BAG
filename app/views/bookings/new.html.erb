@@ -1,6 +1,8 @@
-<div class="container">
-  <div class="form-wrapper">
-    <h2>Book <%=@bag.user.first_name%>'s bag</h2>
+<div class="container" style="text-align:center; margin-top:15px">
+  <div class="form-wrapper", style="margin:auto;">
+    <h2>Book the bag</h2>
+    <div class="booking-shape"></div>
+    <div style="display:flex; justify-content:center">
     <%= simple_form_for [@bag, @booking] do |f| %>
       <%= f.input :start_date, label: "Pick your dates:", as: :string, required: false, input_html: { id: "range_start", class: "d-none"} %>
       <%= f.input :end_date, label: false, as: :string, required: false, input_html: { id: "range_end", class: "d-none" } %>
@@ -22,6 +24,7 @@
       </div>
     </div>
 <% end %>
+</div>
 
 <div
   id="booking-form-div"
