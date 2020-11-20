@@ -44,17 +44,16 @@
   <div class="row">
     <% @bookings.each do |booking| %>
     <div class="col col-lg-4">
-      <div class="card-bag">
-        <%= image_tag booking.bag.images[0]%>
-        <div class="card-bag-infos">
-          <div>
-            <%= booking.start_date.strftime("%d %b. %Y") %> -- <%= booking.end_date.strftime("%d %b. %Y") %>
-            <br>
-          </div>
-          <%=link_to "delete", bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+      <div class=" card-user" style="background-image: url('<%= cl_image_path booking.bag.images[0].key %>' );">
         </div>
+
+            <div class="card-bag2">
+              <%= booking.start_date.strftime("%d %b. %Y") %> -- <%= booking.end_date.strftime("%d %b. %Y") %>
+              <br>
+            <%=link_to "delete", bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+            </div>
+
       </div>
-    </div>
     <% end %>
   </div>
 </div>
