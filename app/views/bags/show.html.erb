@@ -3,7 +3,7 @@
 
 <div class="flexbox">
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:700px" >
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px" >
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -12,7 +12,7 @@
   <div class="carousel-inner">
      <% @bag.images.each_with_index do |image, index| %>
         <div class="carousel-item <%= "active" if index == 0%>">
-          <%= image_tag image, height: 500, width: 700 %>
+          <%= image_tag image %>
         </div>
       <% end %>
   </div>
@@ -53,8 +53,7 @@
 <div><br></div>
 
 <div class="flexbox1 group">
-  <div class="image-box"> <%= @user.first_name %>
-    <%= image_tag "https://source.unsplash.com/collection/162326/400x400", class: "image-box-user avatar-square" %></div>
+  <div class="image-box">
   <div class="card " style="width: 50rem;">
     <div class="card-body ">
       <h5 class="card-title ">Description : </h5>
