@@ -44,8 +44,8 @@
   <div class="row">
     <% @bookings.each do |booking| %>
     <div class="col col-lg-4">
-      <div class=" card-user" style="background-image: url('<%= cl_image_path booking.bag.images[0].key %>' );">
-        </div>
+      <div>
+        <%= cl_image_tag booking.bag.images[0].key, class:" card-user" %></div>
 
             <div class="card-bag2">
               <%= booking.start_date.strftime("%d %b. %Y") %> -- <%= booking.end_date.strftime("%d %b. %Y") %>
