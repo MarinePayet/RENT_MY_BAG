@@ -9,7 +9,6 @@
     <div class="row">
       <% @bags.each do |bag| %>
         <div class="col col-lg-4">
-
           <div class="card-bag">
             <%= image_tag bag.images[0], height: 500, width: 700, alt:"bag-photo" %>
             <div class="card-bag-infos">
@@ -30,23 +29,34 @@
             </div>
             </div>
       <% end %>
-       </div>
-      </div>
+    </div>
 </div>
 
 <div class="container">
   <div class="col">
     <h1>Your bookings</h1>
   </div>
+
 </div>
 
 <div class="container">
-  <div class="col col-lg-4">
+  <div class="row">
     <% @bookings.each do |booking| %>
-      <%= booking.bag.brand %>
-      <%=link_to "delete", bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
-    <%end %>
+    <div class="col col-lg-4">
+      <div class="card-bag">
+        <%= image_tag booking.bag.images[0]%>
+        <div class="card-bag-infos">
+          <div>
+            <%= booking.start_date.strftime("%d %b. %Y") %> -- <%= booking.end_date.strftime("%d %b. %Y") %>
+            <br>
+          </div>
+          <%=link_to "delete", bag_booking_path(bag_id: booking.bag.id, id: booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
+
 
 
