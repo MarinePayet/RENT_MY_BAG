@@ -1,6 +1,9 @@
 class Bag < ApplicationRecord
+  acts_as_favoritable
+
   belongs_to :user
   has_many :bookings
+  has_many :favorites
   has_many_attached :images
 
   validates :title, :brand, :price, presence: true

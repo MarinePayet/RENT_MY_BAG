@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [:show]
   resources :bags, only: [:show, :new, :create, :edit, :update, :destroy] do
-      resources :bookings, only: [:show, :new, :create, :destroy]
+    resources :bookings, only: [:show, :new, :create, :destroy]
+    resources :favorites, only: [:new, :create, :index, :destroy]
     end
   resources :bags, only: [:index]
   resources :bookings, only: [:destroy]
   get "profile", to: "profiles#me", as: :profile
+
 end
