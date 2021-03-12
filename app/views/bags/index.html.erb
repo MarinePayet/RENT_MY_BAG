@@ -7,13 +7,18 @@
             <div class="card-bag-infos">
               <div>
                 <%= link_to bag.title.upcase.first(20), bag_path(bag[:id]) %>
-                  <% if bag.availability %>
-                  <i class="fas fa-circle" style="color:green"></i>
-                  <% else %>
-                  <i class="fas fa-circle" style="color:red"></i>
-                  <% end %>
-                <br>
-                <%= bag.brand.capitalize %>
+                 <!--  <% if bag.availability %> -->
+                 <!--  <i class="fas fa-circle" style="color:green"></i> -->
+                  <%# else %>
+                  <!-- <i class="fas fa-circle" style="color:red"></i> -->
+                 <!--  <% end %> -->
+                <!-- <br> -->
+                <%#= bag.brand.capitalize %>
+               <!--  <div> <%#= link_to "like", toggle_favorite_bag_path(bag), remote: true, method: :post %> </div> -->
+                <div> <%= link_to toggle_favorite_bag_path(bag), remote: true, method: :post, class:"deco-non-navbar like-icon" do %>
+                  <!-- <i class="fas fa-heart"></i>
+                  <% end %> -->
+                </div>
               </div>
                 <h2 class="card-bag-pricing"><%= bag.price %>€/day</h2>
               </div>
@@ -23,3 +28,12 @@
        </div>
       </div>
 </div>
+
+
+
+        <%#= link_to users_path, class:"deco-non-navbar" do %>
+          <!-- <i class="fas fa-heart"></i>
+          <p>Neighbours</p> -->
+        <%# end %>
+
+

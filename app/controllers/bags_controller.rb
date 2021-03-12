@@ -17,6 +17,8 @@ class BagsController < ApplicationController
     else
       @bags = all_bags
     end
+
+    @favorite_bags = current_user.favorited_by_type('Bag')
   end
 
   def new
@@ -54,9 +56,15 @@ class BagsController < ApplicationController
     redirect_to profile_path
   end
 
+  def toggle_favorite
+    @bag = Bag.find(params[:id])
+    current_user.favorited?(@bag) ? current_user.unfavorite(@bag) : current_user.favorite(@bag)
+  end
+end
+
   private
 
   def bag_params
-    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :color, images: [], mood: [], style: [])
+    params.require(:bag).permit(:title, :price, :description, :brand, :availability, :id, :color, :toggle_favorite, :like, images: [], mood: [], style: [])
   end
-end
+

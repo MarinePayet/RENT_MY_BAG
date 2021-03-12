@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   resources :bags, only: [:show, :new, :create, :edit, :update, :destroy] do
       resources :bookings, only: [:show, :new, :create, :destroy]
     end
-  resources :bags, only: [:index]
+  resources :bags, only: :index do
+    member do
+      post 'toggle_favorite', to: "bags#toggle_favorite"
+    end
+  end
   resources :bookings, only: [:destroy]
   get "profile", to: "profiles#me", as: :profile
 end

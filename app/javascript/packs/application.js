@@ -10,6 +10,8 @@ require("channels")
 
 import "../plugins/flatpickr"
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin"
+import { } from '../components/toggle_favorite';
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -44,4 +46,5 @@ document.addEventListener('turbolinks:load', () => {
       "disable": bookings,
     })
   }
+
 });

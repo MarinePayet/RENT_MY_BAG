@@ -1,0 +1,6 @@
+var bagId = '<%= @bag.id%>'
+function toggleLikeButton(bagId, innerHTML) {
+  let likeButton = document.querySelector(`.like-icon[data-id='${bagId}']`)
+  likeButton.classList.toggle('red');
+}
+toggleLikeButton(bagId);

@@ -35,6 +35,7 @@ gem 'devise'
 gem 'faker'
 gem 'cloudinary', '~> 1.16.0'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'acts_as_favoritor'
 
 group :development, :test do
   gem 'pry-byebug'
